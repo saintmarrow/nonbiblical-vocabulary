@@ -13,7 +13,7 @@ for line_idx, line in enumerate(lines):
     # remove the chapter/verse reference from the line
     text = line.split('\t')[1]
     # remove all special characters, force all letters to lowercase, split into an array of these processed words
-    no_spc_text = re.sub(r"('[sS])|[^a-zA-Z]+", ' ', text).lower().split()
+    no_spc_text = re.sub(r"[^a-zA-Z']+", ' ', text).lower().split()
     # iterate over each word in the array of processed words, storing the word's first found verse
     for word_idx, word in enumerate(no_spc_text):
         # check if the word is already in the dictionary
