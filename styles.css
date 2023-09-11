@@ -1,9 +1,15 @@
+body {
+    background-color: #282a36;
+    color: #f8f8f2;
+    font-family: monospace;
+}
+
 .highlight-notfound {
-    background-color: red;
+    color: #ff5555;
 }
 
 .highlight-found {
-    background-color: green;
+    color: #50fa7b;
 }
 
 .tooltip {
@@ -14,9 +20,8 @@
 
  .tooltip .tooltiptext {
     visibility: hidden;
-    background-color: white;
-    color: black;
-    border-color: black;
+    background-color: #44475a;
+    border-color: #6272a4;
     border-style: solid;
     text-align: center;
     padding: 5px;
