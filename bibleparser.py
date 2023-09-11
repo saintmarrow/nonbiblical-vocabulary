@@ -29,8 +29,9 @@ for line in lines:
 unparsed_file.close()
 
 # open the parsed file, erasing all previous contents
-with open('./parsed/kjv.json', 'w') as outfile:
+with open('./parsed/kjv.js', 'w') as outfile:
     # dump contents of dictionary to file
+    outfile.write("var KJV = ")
     json.dump(dictionary, outfile, ensure_ascii=False)
 # file will automatically close
 # complete
