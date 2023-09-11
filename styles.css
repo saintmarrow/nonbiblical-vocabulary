@@ -19,6 +19,7 @@ textarea {
 
 .tooltip {
     cursor: pointer;
+    display: inline-block;
  }
 
  .tooltiptext {
