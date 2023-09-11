@@ -18,7 +18,7 @@ body {
     cursor: pointer;
  }
 
- .tooltip .tooltiptext {
+ .tooltiptext {
     visibility: hidden;
     background-color: #44475a;
     border-color: #6272a4;
