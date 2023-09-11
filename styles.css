@@ -4,6 +4,10 @@ body {
     font-family: monospace;
 }
 
+textarea {
+    background-color: #44475a;
+}
+
 .highlight-notfound {
     color: #ff5555;
 }
