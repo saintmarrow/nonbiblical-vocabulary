@@ -11,7 +11,7 @@ $(document).ready(function(){
         console.log(word_arr);
         // iterate over each word in the text block
         for (let word_idx in word_arr) {
-            var word = word_arr[word_idx];
+            var word = word_arr[word_idx].toLowerCase();
             // check if the word is alphabetical characters
             if (/^[A-Za-z]+$/.test(word)) {
                 // search word in dictionary
