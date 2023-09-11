@@ -20,6 +20,7 @@ textarea {
 .tooltip {
     cursor: pointer;
     display: inline-block;
+    position: relative;
  }
 
  .tooltiptext {
