@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Nonbiblical-Vocabulary</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="./parsed/KJV.js"></script>
+        <script src="./scripts.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <h1>Nonbiblical-Vocabulary</h1>
+        <p>the easy way to check if "none of these words are in the bible"</p>
+        <form id="entry-form">
+            <p>Translation:</p> 
+            <input type="radio" id="kjv" name="translation" value="kjv" checked>
+            <label for="kjv">King James Version (KJV)</label><br>
+            <p>Search Text:</p>
+            <textarea id="entry-field" rows="5" cols="60" name="text" placeholder="Enter your text here"></textarea>
+            <br>
+            <input id="form-submit" type="submit" value="Submit">
+        </form>
+        <hr>
+        <p>press submit to review the results for your text</p>
+        <h3>Results:</h3>
+        <p id="processed-block"></p>      
+    </body>
+</html>

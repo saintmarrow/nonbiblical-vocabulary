@@ -1,0 +1,39 @@
+.highlight-notfound {
+    background-color: red;
+}
+
+.highlight-found {
+    background-color: green;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+ }
+
+ .tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 125%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    width:25vw;
+ }
+
+ /* Show the tooltip text when hovering on the span element */
+ .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+ }
