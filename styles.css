@@ -3,17 +3,33 @@ body {
     color: #f8f8f2;
     font-family: monospace;
     font-size: 2vh;
+    position: relative;
+    display: inline-block;
 }
 h1 {
     font-size: 6vh;
+    max-width: max-content;
+    display: inline-block;
 }
 h3 {
     font-size: 4vh;
 }
+
+.form-buffer {
+    height: 10vh;
+}
+
 textarea {
     background-color: #44475a;
     color: #f8f8f2;
     font-size: 2vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10vh;
+}
+input {
+  font-size: 2vh;
 }
 
 .highlight-notfound {
@@ -22,6 +38,12 @@ textarea {
 
 .highlight-found {
     color: #50fa7b;
+}
+
+#processed_block {
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
 .tooltip {
