@@ -3,7 +3,12 @@ $(document).ready(function(){
         e.preventDefault(); // this will prevent the submit
         // load the selected translation
         // let's just stick with mandatory KJV for now
-        const dict = KJV_dict;
+        var dict = KJV_dict;
+        var text = KJV_text;
+        if ($("#asv").is(':checked')) {
+          var dict = ASV_dict;
+          var text = ASV_text;
+        }
         var total_words = 0;
         var good_words = 0;
         // fetch the textarea's contents
@@ -23,9 +28,9 @@ $(document).ready(function(){
                     // highlight green
                     word_arr[word_idx] = "<span class=\"tooltip highlight-found\">".concat(word_arr[word_idx]);
                     // isolate the reference of the verse
-                    var tooltip_title = "<b>" + KJV_text[dict[word]].split("\t")[0] + "</b><hr>";
+                    var tooltip_title = "<b>" + text[dict[word]].split("\t")[0] + "</b><hr>";
                     // isolate the text of the verse
-                    var tooltip_text = KJV_text[dict[word]].split("\t")[1];
+                    var tooltip_text = text[dict[word]].split("\t")[1];
                     // split the text into words and non-words, so we can accurately highlight the target word, regardless of punctuation
                     // we're not using lookaheads/lookbehinds for things like parentheses or punctiation, because not all browsers support lookbehinds
                     // so instead we're doing this like cavemen
