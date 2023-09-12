@@ -28,7 +28,7 @@ textarea {
     cursor: pointer;
     display: inline-block;
     position: relative;
-    font-size: 5vh;
+    font-size: 2vh;
  }
 
  .tooltiptext {
