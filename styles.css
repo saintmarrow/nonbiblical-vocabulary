@@ -2,8 +2,14 @@ body {
     background-color: #282a36;
     color: #f8f8f2;
     font-family: monospace;
+    font-size: 5vh;
 }
-
+h1 {
+    font-size: 10vh;
+}
+h3 {
+    font-size: 7vh;
+}
 textarea {
     background-color: #44475a;
     color: #f8f8f2;
@@ -21,6 +27,7 @@ textarea {
     cursor: pointer;
     display: inline-block;
     position: relative;
+    font-size: 5vh;
  }
 
  .tooltiptext {
@@ -41,6 +48,7 @@ textarea {
     opacity: 0;
     transition: opacity 0.3s;
     width:25vw;
+    font-size: 5vh;
  }
 
  /* Show the tooltip text when hovering on the span element */
