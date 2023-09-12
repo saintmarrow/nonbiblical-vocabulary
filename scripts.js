@@ -4,6 +4,8 @@ $(document).ready(function(){
         // load the selected translation
         // let's just stick with mandatory KJV for now
         const dict = KJV_dict;
+        var total_words = 0;
+        var good_words = 0;
         // fetch the textarea's contents
         var contents = $("#entry-field").val();
         // split up words from any non-alphanumeric characters
@@ -13,9 +15,11 @@ $(document).ready(function(){
             var word = word_arr[word_idx].toLowerCase();
             // check if the word is alphabetical characters
             if (/^[A-Za-z']+$/.test(word)) {
+                total_words++;
                 // search word in dictionary
                 if (dict[word] != undefined) {
                     // word found
+                    good_words++;
                     // highlight green
                     word_arr[word_idx] = "<span class=\"tooltip highlight-found\">".concat(word_arr[word_idx]);
                     // isolate the reference of the verse
@@ -52,7 +56,9 @@ $(document).ready(function(){
         }
         // dump new, highlighted text to results box
         var output = word_arr.join("");
-        $('#processed-block').html(output);         
+        $('#processed-block').html(output);
+        var bib_percent = Math.round(good_words / total_words* 100) / 10000
+        $('#percentage-block').html(bib_percent);
     });
 });
 
