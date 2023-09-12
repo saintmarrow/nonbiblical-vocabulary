@@ -2,17 +2,18 @@ body {
     background-color: #282a36;
     color: #f8f8f2;
     font-family: monospace;
-    font-size: 5vh;
+    font-size: 2vh;
 }
 h1 {
-    font-size: 10vh;
+    font-size: 6vh;
 }
 h3 {
-    font-size: 7vh;
+    font-size: 4vh;
 }
 textarea {
     background-color: #44475a;
     color: #f8f8f2;
+    font-size: 2vh;
 }
 
 .highlight-notfound {
