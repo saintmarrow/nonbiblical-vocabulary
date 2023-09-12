@@ -49,7 +49,7 @@ textarea {
     opacity: 0;
     transition: opacity 0.3s;
     width:25vw;
-    font-size: 5vh;
+    font-size: 2vh;
  }
 
  /* Show the tooltip text when hovering on the span element */
