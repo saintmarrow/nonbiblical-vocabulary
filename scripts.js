@@ -7,13 +7,12 @@ $(document).ready(function(){
         // fetch the textarea's contents
         var contents = $("#entry-field").val();
         // split up words from any non-alphanumeric characters
-        var word_arr = contents.split(/([^A-Za-z]+)/);
-        console.log(word_arr);
+        var word_arr = contents.split(/([^A-Za-z']+)/);
         // iterate over each word in the text block
         for (let word_idx in word_arr) {
             var word = word_arr[word_idx].toLowerCase();
             // check if the word is alphabetical characters
-            if (/^[A-Za-z]+$/.test(word)) {
+            if (/^[A-Za-z']+$/.test(word)) {
                 // search word in dictionary
                 if (dict[word] != undefined) {
                     // word found
@@ -26,7 +25,7 @@ $(document).ready(function(){
                     // split the text into words and non-words, so we can accurately highlight the target word, regardless of punctuation
                     // we're not using lookaheads/lookbehinds for things like parentheses or punctiation, because not all browsers support lookbehinds
                     // so instead we're doing this like cavemen
-                    var split_text = tooltip_text.split(/([^A-Za-z]+)/);
+                    var split_text = tooltip_text.split(/([^A-Za-z']+)/);
                     // now iterate over all that shit until we find our target word
                     for (let tooltip_idx in split_text) {
                         if (split_text[tooltip_idx].toLowerCase() === word) {
@@ -42,14 +41,10 @@ $(document).ready(function(){
                     // now cram that all into a tooltip that's going to be shown as a hover-box over the target word
                     word_arr[word_idx] = word_arr[word_idx].concat("<span class=\"tooltiptext\">" + tooltip_title + tooltip_text +"</span></span>");
                 } else {
-                    // double check if this is the trailing s from an 's, split() shows weird behavior when I try to include that with our regex
-                    console.log(word)
-                    if (/^[sS]$/.test(word) == false) {
                         // word not found
                         // highlight red
                         word_arr[word_idx] = word_arr[word_idx].concat("</span>");
                         word_arr[word_idx] = "<span class=\"highlight-notfound\">".concat(word_arr[word_idx]);
-                    }
                 }
             } else {
               word_arr[word_idx] = word.replace(/\n\r?/g, "<br/>");  
