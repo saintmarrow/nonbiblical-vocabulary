@@ -57,7 +57,7 @@ $(document).ready(function(){
         // dump new, highlighted text to results box
         var output = word_arr.join("");
         $('#processed-block').html(output);
-        var bib_percent = Math.round(good_words / total_words* 100) / 10000
+        var bib_percent = Math.round(good_words / total_words* 10000) / 100
         $('#percentage-block').html(bib_percent);
     });
 });
