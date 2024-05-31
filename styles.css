@@ -34,10 +34,12 @@ input {
 
 .highlight-notfound {
     color: #ff5555;
+    font-size: 2vh;
 }
 
 .highlight-found {
     color: #50fa7b;
+    font-size: 2vh;
 }
 
 #processed_block {
